@@ -228,7 +228,7 @@ Let me break down how I can release a new "dev" version for my PR branch.
 1. I do my dev work on a branch named `add-cool-new-feature`
 1. I merge the (properly-titled) commits into a `test-add-cool-new-feature` branch (creating it if this is the first time)
 1. I push `test-add-cool-new-feature` to `origin`
-1. CI runs and releases the one-off version (e.g. `1.3.0-test-add-cool-new-feature.1`)
+1. CI runs and releases the one-off version (e.g. `1.3.0-test-add-cool-new-feature.1`) <---
 
 Instead of including "alpha" or "beta" in the version, it includes the entire name of the branch. If I continue to push new commits to the branch the `.1` part will be `.2`, `.3`, etc. **And now I can create my test release branches while other developers can do the same in parallel.** And once we're done, we delete our branches from `origin`. The `alpha` and `beta` [pre-release branches](https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/release-workflow/pre-releases.md#publishing-pre-releases) remain as they should be.
 
